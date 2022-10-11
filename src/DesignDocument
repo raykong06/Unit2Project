@@ -25,31 +25,31 @@ public LinearEquation(int x1, int y1, int x2, int y2)
 - assign all parameters to a private variable to be used later
 
 Methods
-public double SlopeCalculator()
+public double slopeCalculator()
 - will take the y2 value and subtract y1 value from it, assign it to private variable rise
 - will take the x2 value and subtract the x1 value from it, assign to private variable run
 - will divide rise by run, assign to private slope variable
 - check to see if slope is a whole number/int, if so then use dft, if no then df
 - return slope value
 
-public double YIntercept()
+public double yIntercept()
 - will take the slope value and multiply it by x1 value, then multiply by -1, assign value to variable inverse
  ^ (takes the inverse to calculate and "isolate" the y-intercept in an equation)
 - will take the inverse and add it to the y1 value
 - check to see if yintercept is a whole number/int, if so then use dft, if no then df
 - return yIntercept value
 
-public String SlopeInterceptForm()
+public String slopeInterceptForm()
 - will put all the values necessary in correct positions of a slope-intercept form equation
 - returns a String equation in y=mx+b format
 
-public double Distance()
+public double distance()
 - assigns distance formula equation to distance variable
 - will use Math.sqrt, and manually multiply (i * i) to square values
 - check to see if distance is a whole number/int, if so then use dft, if no then df
 - returns distance value
 
-public void SolvedCoord()
+public void solvedCoord(x3)
 - calculate y-value by using y = mx + b formula
 - multiply x3 by slope then adds the y-intercept value
 - PRINTS the calculated point (x3, y3)
@@ -106,4 +106,4 @@ Step 9: repeat for other coordinate
 Use the methods to print toString
 
 Step 10: ask user to enter x-value
-use method SolvedCoord
+use method solvedCoord(x3)
