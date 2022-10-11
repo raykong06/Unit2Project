@@ -1,0 +1,101 @@
+LinearEquation class
+
+use DecimalFormat to round to certain places and truncate where needed (aesthetics)
+- df will round to two decimal places "0.00"
+- dft will truncate trailing zeros if the double values do not have a decimal
+
+Instance Variables:
+(all to be initialized, not yet assigned to a value)
+- private int x1 = x value of first input coordinate
+- private int y1 = y value of first input coordinate
+- private int x2 = x value of second input coordinate
+- private int y2 = y value of second input coordinate
+- private int rise
+- private int run
+- private double slope
+- private double inverse
+- private double yIntercept
+- private String equation
+- private double distance
+- private double x3 = x value of third point input coordinate
+- private double y3 = calculated value of third y point
+
+Constructor
+public LinearEquation(int x1, int y1, int x2, int y2)
+- assign all parameters to a private variable to be used later
+
+Methods
+public double SlopeCalculator()
+- will take the y2 value and subtract y1 value from it, assign it to private variable rise
+- will take the x2 value and subtract the x1 value from it, assign to private variable run
+- will divide rise by run, assign to private slope variable
+- check to see if slope is a whole number/int, if so then use dft, if no then df
+- return slope value
+
+public double YIntercept()
+- will take the slope value and multiply it by x1 value, then multiply by -1, assign value to variable inverse
+ ^ (takes the inverse to calculate and "isolate" the y-intercept in an equation)
+- will take the inverse and add it to the y1 value
+- check to see if yintercept is a whole number/int, if so then use dft, if no then df
+- return yIntercept value
+
+public String SlopeInterceptForm()
+- will put all the values necessary in correct positions of a slope-intercept form equation
+- returns a String equation in y=mx+b format
+
+public double Distance()
+- assigns distance formula equation to distance variable
+- will use Math.sqrt, and manually multiply (i * i) to square values
+- check to see if distance is a whole number/int, if so then use dft, if no then df
+- returns distance value
+
+public void SolvedCoord()
+- calculate y-value by using y = mx + b formula
+- multiply x3 by slope then adds the y-intercept value
+- PRINTS the calculated point (x3, y3)
+
+public String toString()
+This method will display all relevant information about this
+instance including:
+- First pair of coordinates: (x1, y1)
+- Second pair of coordinates: (x2, y2)
+- Slope of line: private variable slope
+- Y-intercept
+- Slope intercept form equation
+- Distance between points
+
+EquationRunner class
+
+Requires Scanner class to accept user input
+s Scanner
+
+Instance variables:
+- int x1 = x value of first input coordinate
+- int y1 = y value of first input coordinate
+- int x2 = x value of second input coordinate
+- int y2 = y value of second input coordinate
+
+- String coord1
+- String coord2
+
+(to be converted into integers later)
+- String stringX1
+- String stringY1
+- String stringX2
+- String stringY2
+
+- int indexComma1 = comma index in first coord
+- int indexComma2 = comma index in second coord
+
+- int lengthCoord1 = length of coord 1
+- int lengthCoord2 = length of coord 2
+
+- double x3 = value of x-value input
+
+Step 1: Ask user to enter first coordinate point
+Step 2: Ask user to enter second coordinate point
+(use s.nextString to turn
+Step 3: parse out x1 value by finding index of comma in first coord point, assign to indexComma1
+Step 4: take substring by taking index 1 to indexComma1, assign to stringX1
+Step 5: convert string to integer using Integer.parseInt(stringX1), assign to int x1
+Step 6: parse out y1 value by getting length of coord 1,
