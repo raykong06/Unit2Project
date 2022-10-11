@@ -94,8 +94,16 @@ Instance variables:
 
 Step 1: Ask user to enter first coordinate point
 Step 2: Ask user to enter second coordinate point
-(use s.nextString to turn
+(use s.nextString to assign to variables coord1 and 2)
 Step 3: parse out x1 value by finding index of comma in first coord point, assign to indexComma1
 Step 4: take substring by taking index 1 to indexComma1, assign to stringX1
 Step 5: convert string to integer using Integer.parseInt(stringX1), assign to int x1
-Step 6: parse out y1 value by getting length of coord 1,
+Step 6: parse out y1 value by getting length of coord 1, assign to lengthCoord1
+Step 7: get substring from indexComma1 + 1 to lengthCoord1
+Step 8: convert string to integer
+Step 9: repeat for other coordinate
+
+Use the methods to print toString
+
+Step 10: ask user to enter x-value
+use method SolvedCoord
