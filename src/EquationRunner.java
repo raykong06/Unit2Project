@@ -48,12 +48,15 @@ public class EquationRunner {
         stringX2 = coord2.substring(1,indexComma2);
         x2 = Integer.parseInt(stringX2);
 
-        // parse y1 value
+            // parse y1 value
         lengthCoord2 = coord2.length();
         stringY2 = coord2.substring((indexComma2 + 1),lengthCoord2);
         y2 = Integer.parseInt(stringY2);
 
+        // Initialize Object
         LinearEquation one = new LinearEquation(x1,y1,x2,y2);
+
+        // toString Print
         System.out.println(one.toString());
     }
 }
