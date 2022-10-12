@@ -10,8 +10,8 @@ Instance Variables:
 - private int y1 = y value of first input coordinate
 - private int x2 = x value of second input coordinate
 - private int y2 = y value of second input coordinate
-- private int rise
-- private int run
+- private double rise
+- private double run
 - private double slope
 - private double inverse
 - private double yIntercept
@@ -19,9 +19,10 @@ Instance Variables:
 - private double distance
 - private double x3 = x value of third point input coordinate
 - private double y3 = calculated value of third y point
+- private String statement
 
 Constructor
-public LinearEquation(int x1, int y1, int x2, int y2)
+public LinearEquation(int x1Coord, int y1Coord, int x2Coord, int y2Coord)
 - assign all parameters to a private variable to be used later
 
 Methods
@@ -63,6 +64,8 @@ instance including:
 - Y-intercept
 - Slope intercept form equation
 - Distance between points
+
+    - set statement to variable statement then return, using escape characters
 
 EquationRunner class
 
