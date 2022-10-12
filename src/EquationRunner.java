@@ -53,7 +53,7 @@ public class EquationRunner {
         stringY2 = coord2.substring((indexComma2 + 1),lengthCoord2);
         y2 = Integer.parseInt(stringY2);
 
-        LinearEquation one = new LinearEquation(7,5,2,2);
+        LinearEquation one = new LinearEquation(x1,y1,x2,y2);
         System.out.println(one.toString());
     }
 }
