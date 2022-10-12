@@ -43,7 +43,15 @@ public class EquationRunner {
         stringY1 = coord1.substring((indexComma1 + 1),lengthCoord1);
         y1 = Integer.parseInt(stringY1);
 
+            // parse x2 value
+        indexComma2 = coord2.indexOf(",");
+        stringX2 = coord2.substring(1,indexComma2);
+        x2 = Integer.parseInt(stringX2);
 
+        // parse y1 value
+        lengthCoord2 = coord2.length();
+        stringY2 = coord2.substring((indexComma2 + 1),lengthCoord2);
+        y2 = Integer.parseInt(stringY2);
 
         LinearEquation one = new LinearEquation(7,5,2,2);
         System.out.println(one.toString());
