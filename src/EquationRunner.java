@@ -40,7 +40,7 @@ public class EquationRunner {
 
             // parse y1 value
         lengthCoord1 = coord1.length();
-        stringY1 = coord1.substring((indexComma1 + 1),lengthCoord1);
+        stringY1 = coord1.substring((indexComma1 + 1),lengthCoord1-1);
         y1 = Integer.parseInt(stringY1);
 
             // parse x2 value
@@ -50,7 +50,7 @@ public class EquationRunner {
 
             // parse y1 value
         lengthCoord2 = coord2.length();
-        stringY2 = coord2.substring((indexComma2 + 1),lengthCoord2);
+        stringY2 = coord2.substring((indexComma2 + 1),lengthCoord2-1);
         y2 = Integer.parseInt(stringY2);
 
         // Initialize Object
