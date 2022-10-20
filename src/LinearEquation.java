@@ -1,9 +1,5 @@
-import java.text.DecimalFormat;
 public class LinearEquation {
     // Instance Variables
-    DecimalFormat df = new DecimalFormat("0.00");
-    DecimalFormat dft = new DecimalFormat("0");
-
     private int x1;
     private int y1;
     private int x2;
@@ -47,7 +43,8 @@ public class LinearEquation {
 
     public String slopeInterceptForm()
     {
-        return ("y = " + slope + "x + " + yIntercept);
+
+        return ("y = " + String.format("%.2f",slope) + "x + " + String.format("%.2f",yIntercept));
     }
 
     public double distance()
@@ -59,12 +56,17 @@ public class LinearEquation {
     public void solvedCoord(double x3)
     {
         y3 = slope * x3 + yIntercept;
-        System.out.println("(" + x3 + "," + y3 + ")");
+        System.out.println("(" + String.format("%.2f",x3) + "," + String.format("%.2f",y3) + ")");
     }
 
     public String toString()
     {
-        statement = "First Pair: (" + x1 + "," + y1 + ")\nSecond Pair: (" + x2 + "," + y2 + ")\nSlope of Line: " + slopeCalculator() + "\nY-Intercept: " + yIntercept() + "\nSlope-Intercept Form: " + slopeInterceptForm() + "\nDistance Between Points: " + distance();
+        statement = "First Pair: (" + x1 + "," + y1 + ")\n" +
+                "Second Pair: (" + x2 + "," + y2 + ")\n" +
+                "Slope of Line: " + String.format("%.2f",slopeCalculator()) + "\n" +
+                "Y-Intercept: " + String.format("%.2f",yIntercept()) + "\n" +
+                "Slope-Intercept Form: " + slopeInterceptForm() + "\n" +
+                "Distance Between Points: " + String.format("%.2f",distance());
         return statement;
     }
 }
