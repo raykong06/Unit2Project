@@ -26,10 +26,10 @@ public class EquationRunner {
         double x3;
 
         // User Input
-        System.out.println("Enter the first (x,y) coordinate point: ");
+        System.out.print("Enter the first (x,y) coordinate point: ");
         coord1 = s.nextLine();
 
-        System.out.println("Enter the second (x,y) coordinate point: ");
+        System.out.print("Enter the second (x,y) coordinate point: ");
         coord2 = s.nextLine();
 
         // Parse Out Values
@@ -54,9 +54,15 @@ public class EquationRunner {
         y2 = Integer.parseInt(stringY2);
 
         // Initialize Object
-        LinearEquation one = new LinearEquation(x1,y1,x2,y2);
+        LinearEquation coordinate = new LinearEquation(x1,y1,x2,y2);
 
         // toString Print
-        System.out.println(one.toString());
+        System.out.println(coordinate.toString());
+
+        // Third x-value input
+        System.out.print("Enter an x-value: ");
+        x3 = s.nextDouble();
+        System.out.print("Solved coordinate point is: ");
+        coordinate.solvedCoord(x3);
     }
 }
