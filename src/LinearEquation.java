@@ -44,7 +44,7 @@ public class LinearEquation {
     public String slopeInterceptForm()
     {
 
-        return ("y = " + String.format("%.2f",slope) + "x + " + String.format("%.2f",yIntercept));
+        return ("y = " + (int)rise + "/" + (int)run + "x + " + String.format("%.2f",yIntercept));
     }
 
     public double distance()
